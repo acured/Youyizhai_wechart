@@ -1,0 +1,25 @@
+<!--pages/newOrder/newOrder.wxml-->
+<view>
+  <navigator url="../newOrderDetail/newOrderDetail?key={{room}}" hover-class="navigator-hover">房间 {{room}}</navigator>
+  <picker-view indicator-style="height: 50px;" style="width: 100%; height: 50px;" value="{{value}}" bindchange="roombindChange">
+    <picker-view-column>
+      <view wx:for="{{rooms}}" style="line-height: 50px">{{item}}</view>
+    </picker-view-column>
+  </picker-view>
+
+  <view style='margin-top:50px'>{{year}}年{{month}}月{{day}}日</view>
+  <picker-view indicator-style="height: 50px;" style="width: 100%; height: 50px;" value="{{value}}" bindchange="bindChange">
+    <picker-view-column>
+      <view wx:for="{{years}}" style="line-height: 50px">{{item}}年</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{months}}" style="line-height: 50px">{{item}}月</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{days}}" style="line-height: 50px">{{item}}日</view>
+    </picker-view-column>
+  </picker-view>
+    <view class='btn_layout'>
+    <button class='btn_order' bindtap='orderBtnClickEvent'>预定</button>
+  </view>
+</view>

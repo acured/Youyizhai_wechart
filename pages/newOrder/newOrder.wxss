@@ -1,0 +1,14 @@
+/* pages/newOrder/newOrder.wxss */
+.btn_layout {
+  margin-top: 200px;
+}
+
+.btn_new_order {
+  float: left;
+  width: 180px;
+}
+
+.btn_my_order {
+  float: right;
+  width: 180px;
+}

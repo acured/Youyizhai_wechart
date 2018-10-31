@@ -1,0 +1,7 @@
+<!--pages/myOrder/myOrder.wxml-->
+<view class="container order-list">
+  <block wx:for="{{orders}}" wx:for-item="order">
+    <navigator url="../myOrderDetail/myOrderDetail?key={{order[0].key}}" hover-class="navigator-hover">{{order[0].key}}. {{order[1].description}}</navigator>
+  </block>
+  <text>{{serviceUrl}}</text>
+</view>
